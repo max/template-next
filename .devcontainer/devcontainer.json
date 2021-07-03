@@ -1,0 +1,30 @@
+{
+  "name": "template-next",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "16"
+    }
+  },
+  "settings": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      "**/.next": true,
+      "**/node_modules": true
+    },
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  },
+  "extensions": ["esbenp.prettier-vscode@6.4.0", "dbaeumer.vscode-eslint"],
+  "forwardPorts": [3000],
+  "postCreateCommand": "npm install",
+  "remoteUser": "node"
+}
